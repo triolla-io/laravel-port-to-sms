@@ -1,0 +1,44 @@
+{
+    "name": "yna/laravel-port-to-sms",
+    "description": "Port2SMS Notifications channel for Laravel 5.3.",
+    "keywords": ["laravel", "notifications", "port2sms", "portToSms"],
+    "homepage": "https://github.com/ynacorp/port-to-sms",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Shemi",
+            "role": "Developer",
+            "homepage": "https://github.com/ynacorp"
+        }
+    ],
+    "require": {
+        "php": ">=5.6.4",
+        "ext-mbstring": "*",
+        "guzzlehttp/guzzle": "^6.2",
+        "illuminate/queue": "5.1.*|5.2.*|5.3.*|5.4.*|5.5.*",
+        "illuminate/notifications": "5.1.*|5.2.*|5.3.*|5.4.*|5.5.*",
+        "illuminate/support": "5.1.*|5.2.*|5.3.*|5.4.*|5.5.*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.2",
+        "mockery/mockery": "^0.9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Yna\\PortToSms\\": "src"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Yna\\PortToSms\\PortToSmsServiceProvider"
+            ]
+        }
+    }
+}
